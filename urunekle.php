@@ -22,6 +22,8 @@ if (isset($_POST["urunadi"])) {
         exit;
     }
 
+    header("Location: anasayfa.php");
+
 } else {
     ?>
 

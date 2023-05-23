@@ -21,9 +21,9 @@ if (isset($_POST["kullaniciadi"])){
         exit();
     }
 
-    $form_sifre_hash = hash("sha256", $form_sifre);
+    // $form_sifre_hash = hash("sha256", $form_sifre);
 
-    $query = mysqli_query($veritabani, "INSERT INTO `kullanicilar` (`ad`, `soyad`, `email`, `kullaniciadi`, `sifre`) VALUES ('".$form_ad."','".$form_soyad."','".$form_email."','".$form_kullaniciadi."','".$form_sifre_hash."')");
+    $query = mysqli_query($veritabani, "INSERT INTO `kullanicilar` (`ad`, `soyad`, `email`, `kullaniciadi`, `sifre`) VALUES ('".$form_ad."','".$form_soyad."','".$form_email."','".$form_kullaniciadi."','".$form_sifre."')");
 
     if (mysqli_errno($veritabani) != 0){
         echo "Bir hata oluştu.";

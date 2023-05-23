@@ -13,9 +13,9 @@
 
             $form_kullaniciadi = $_POST["kullaniciadi"];
             $form_sifre = $_POST["sifre"];
-            $form_sifre_hash = hash("sha256", $form_sifre);
+            // $form_sifre_hash = hash("sha256", $form_sifre);
 
-            $kullanici = mysqli_query($veritabani, "SELECT * FROM `kullanicilar` WHERE kullaniciadi='$form_kullaniciadi' AND sifre='$form_sifre_hash'");
+            $kullanici = mysqli_query($veritabani, "SELECT * FROM `kullanicilar` WHERE kullaniciadi='$form_kullaniciadi' AND sifre='$form_sifre'");
             $row = mysqli_fetch_assoc($kullanici);
             $kullanicino = mysqli_num_rows($kullanici);
 
